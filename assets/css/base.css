@@ -5,6 +5,7 @@
     --text-color: rgba(0, 0, 0.8);
     --border-color: #dbdbdb;
     --hover-color: #fafafa;
+    --star-gold-color: #ffce3e;
     --growth-from: 0;
     --growth-to: 1;
     --header-height: 120px;
@@ -219,6 +220,7 @@ html {
     display: none;
     border-radius: var(--border-radius);
     box-shadow: 0 1px 2px #ccc;
+    z-index: 1;
 }
 
 .select-input__list::before {
@@ -248,3 +250,42 @@ html {
 .select-input__link:hover {
     color: var(--primary-color);
 }
+
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #00000066;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: var(--border-radius);
+}
+
+.pagination-item--active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active:hover {
+    opacity: 0.9;
+}
+
+.pagination-item__icon {}
